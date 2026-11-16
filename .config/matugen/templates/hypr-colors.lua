@@ -1,0 +1,10 @@
+return {
+    active_border = {
+        colors = {
+            "rgba({{colors.tertiary.default.hex_stripped}}ee)",
+            "rgba({{colors.tertiary.default.hex_stripped}}ee)",
+        },
+        angle = 45,
+    },
+    inactive_border = "rgba({{colors.outline_variant.default.hex_stripped}}aa)",
+}
