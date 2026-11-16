@@ -1,0 +1,64 @@
+@import "theme.rasi"
+
+window {
+    background-color: @bg;
+    border: 0px;
+    border-color:@primary;
+    border-radius:8px;
+}
+
+mainbox { 
+    padding: 14px; 
+    spacing: 8px;
+}
+
+inputbar {
+    children: [prompt, entry];
+    margin: 0 0 10px 0;
+    spacing: 10px;
+}
+prompt {
+    background-color: @tertiary;
+    padding: 5px 10px;
+    border-radius: 90%;
+    text-color: @bg;
+    margin: 0 0 5px 0;
+}
+entry {
+    placeholder: " Search / Choose Wallpaper";
+    text-color: @primary;
+    padding: 5px 0 5px 15px;
+    background-color: @bg-alt;
+    border-radius: 90%;
+    margin: 0 0 5px 4px;
+}
+
+listview {
+    columns: 4;
+    lines: 1;
+    fixed-columns: true;
+}
+
+element {
+    orientation: vertical;
+    spacing: 0;
+    margin: 3px;
+    border-radius: 4px;
+}
+
+element selected.normal {
+    border-radius: 4px;
+    background-color: @bg-alt;
+}
+
+element-text {
+    text-color: @primary;
+    margin: -20px 0 2px 0px;
+    horizontal-align: 0.5;
+}
+
+element-icon {
+    margin: -5px;
+    padding: 10px;
+    size: 150px;
+}

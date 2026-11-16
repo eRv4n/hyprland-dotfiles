@@ -1,0 +1,81 @@
+@import "../theme.rasi"
+
+configuration {
+    show-icons: true;
+    icon-theme: "Papirus";
+}
+
+window {
+    width: 380px;
+    background-color: @bg;
+    border: 0px;
+    border-color: @primary;
+    border-radius: 12px;
+}
+
+inputbar {
+    children: [prompt, entry];
+    margin: 0 0 10px 0;
+    spacing: 10px;
+}
+prompt {
+    background-color: @tertiary;
+    padding: 5px 10px;
+    border-radius: 90%;
+    text-color: @bg;
+    margin: 0 0 5px 0;
+}
+entry {
+    placeholder: "  Search emojis...";
+    text-color: @primary;
+    padding: 5px 0 5px 15px;
+    background-color: @bg-alt;
+    border-radius: 90%;
+    margin: 0 0 5px 4px;
+}
+
+mainbox { 
+    padding: 14px; 
+    spacing: 8px;
+}
+
+listview {
+    lines: 8;
+    scrollbar: false;
+    fixed-columns: true;
+    columns: 4;
+    lines: 4;
+    spacing: 4px;
+    flow: horizontal;
+}
+
+element {
+    padding: 20px 0px; 
+    border-radius: 8px;
+    orientation: vertical;
+}
+
+element selected.normal {
+    background-color: @primary;
+    text-color: @bg;
+}
+
+element-icon { 
+    size: 0px;
+}
+
+element-text {
+  margin:0px 0px 15px 0px;
+  padding: 0 0 10px 0;
+  wrap: false;
+  font: "Noto Color Emoji 22";
+  horizontal-align: 0.5;
+  vertical-align: 0.5;
+}
+element-text selected.normal {
+    text-color: @bg;
+}
+
+entry {
+    text-color: @primary;
+}

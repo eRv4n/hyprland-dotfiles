@@ -1,0 +1,9 @@
+* {
+    bg: #101417;
+    fg: #e0e3e8;
+    bg-alt: #262a2e;
+    primary: #95cdf7;
+    secondary: #b7c9d9;
+    tertiary: #cfc0e8;
+    error: #ffb4ab;
+}

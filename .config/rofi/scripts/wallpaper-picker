@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+WALL_DIR="$HOME/Pictures/wallpapers"
+
+# Tampilkan daftar dengan thumbnail (ikon = file gambarnya sendiri)
+choice=$(
+  find "$WALL_DIR" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' -o -iname '*.gif' \) | sort |
+  while read -r f; do
+    printf '%s\0icon\x1f%s\n' "$(basename "$f")" "$f"
+  done | rofi -dmenu -i -p "󰸉  Wallpaper" -show-icons \
+    -theme ~/.config/rofi/wallpaper.rasi
+)
+
+[ -z "$choice" ] && exit 0
+wall="$(find "$WALL_DIR" -type f -name "$choice" | head -n1)"
+
+pkill -x waybar
+while pgrep -x waybar >/dev/null; do sleep 0.05; done
+
+awww img "$wall" --transition-type grow --transition-pos center --transition-duration 1.5 --transition-fps 60
+matugen image "$wall" -m dark -t scheme-tonal-spot --source-color-index 0
+
+setsid -f waybar
+# notify-send "󰸉   Wallpaper changed" "A fresh new look for your desktop."
+# notify-send -i "home/ervan/Downloads/color-palette.svg" "Theme Updated" "The new color palette has been applied."
+notify-send -i applications-graphics " Wallpaper Updated"

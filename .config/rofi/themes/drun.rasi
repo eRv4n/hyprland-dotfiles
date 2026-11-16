@@ -1,0 +1,75 @@
+@import "../theme.rasi"
+
+configuration {
+    show-icons: true;
+    icon-theme: "Papirus";
+}
+
+window {
+    width: 520px;
+    background-color: @bg;
+    border: 0px;
+    border-color: @primary;
+    border-radius: 12px;
+}
+
+inputbar {
+    children: [prompt, entry];
+    margin: 0 0 10px 0;
+    spacing: 10px;
+}
+prompt {
+    background-color: @tertiary;
+    padding: 5px 10px;
+    border-radius: 90%;
+    text-color: @bg;
+    margin: 0 0 5px 0;
+}
+entry {
+    placeholder: "  Search applications...";
+    text-color: @primary;
+    padding: 5px 0 5px 15px;
+    background-color: @bg-alt;
+    border-radius: 90%;
+    margin: 0 0 5px 4px;
+}
+
+mainbox { 
+    padding: 14px; 
+    spacing: 8px;
+}
+
+listview {
+    lines: 8;
+    scrollbar: false;
+    spacing: 6px;
+    fixed-columns: true;
+    columns: 2;
+    lines: 6;
+    flow: horizontal;
+}
+
+element {
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+element selected.normal {
+    background-color: @primary;
+    text-color: @bg;
+}
+
+element-icon { 
+    size: 32px;
+    margin: 0 8px 0 0;
+}
+
+element-text {
+}
+element-text selected.normal {
+    text-color: @bg;
+}
+
+entry {
+    text-color: @primary;
+}

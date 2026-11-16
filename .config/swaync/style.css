@@ -1,0 +1,233 @@
+@import "colors.css";
+
+* {
+  font-family: "AdwaitaSans", "JetbrainsMonoNerd";
+  outline: none;
+}
+
+:root {
+  --notification-icon-size: 35px;
+}
+
+notificationwindow,
+blankwindow {
+  background: transparent;
+}
+
+/* brightness */
+.widget-backlight {
+  margin-left: 12px;
+  margin-right: 12px;
+  padding: 10px 20px;
+  background: @surface_container;
+}
+
+.widget-backlight label {
+  color: @tertiary;
+}
+
+.widget-backlight scale trough highlight {
+  background: @primary;
+}
+
+.widget-backlight scale trough slider {
+  background: @tertiary;
+}
+.widget-backlight scale trough slider:hover {
+  background: @primary;
+}
+
+/* volume */
+.widget-volume {
+  margin-left: 12px;
+  margin-right: 12px;
+  padding: 10px 20px;
+  background: @surface_container;
+}
+
+.widget-volume label {
+  color: @tertiary;
+}
+
+.widget-volume scale trough highlight {
+  background: @primary;
+}
+
+.widget-volume scale trough slider {
+  background: @tertiary;
+}
+.widget-volume scale trough slider:hover {
+  background: @primary;
+}
+
+/* button */
+.widget-buttons-grid {
+  margin-top: 20px;
+  padding: 0;
+  /* background: red; */
+}
+
+.widget-buttons-grid flowbox {
+  padding: 0;
+  /* background: green; */
+}
+
+.widget-buttons-grid flowbox flowboxchild {
+  padding: 0;
+  margin: 0;
+  /* background: blue; */
+}
+
+.widget-buttons-grid flowbox flowboxchild:hover {
+  background: transparent;
+}
+
+.widget-buttons-grid flowbox flowboxchild button {
+  margin: 0 5px;
+  background: @tertiary;
+  color: @bg;
+  padding: 10px 22px;
+  border: none;
+  outline: none;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:not(:checked) {
+  background: @tertiary;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:checked {
+  background: @primary;
+}
+.widget-buttons-grid flowbox flowboxchild button:hover {
+  background: @primary;
+}
+
+/* notification */
+.control-center {
+  background: @bg;
+  border: 0 solid @tertiary;
+}
+
+.notification-group {
+  /* background: @surface_container; */
+  background: @bg;
+  /* background: blue; */
+  outline: none;
+  padding: 0px;
+}
+
+.notification-group-collapse-button:hover {
+  background: @primary;
+}
+
+.notification-group-close-all-button:hover {
+  background: @primary;
+}
+
+.notification-group-collapse-button,
+.notification-group-close-all-button {
+  background: @tertiary;
+  color: @bg;
+  margin-bottom: 20px;
+}
+
+/* Sembunyikan ikon gear */
+.notification-group-icon {
+  -gtk-icon-size: 0px;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  opacity: 0;
+}
+
+/* Sembunyikan teks "notify-send" */
+.notification-group-header {
+  font-size: 0;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.close-button {
+  margin-top: 8px;
+  margin-right: 8px;
+  background: @tertiary;
+  color: @bg;
+}
+.close-button:hover {
+  background: @primary;
+}
+
+.floating-notifications {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.image {
+  border-radius: 0;
+  color: @primary;
+  margin-right: 10px;
+}
+
+.notification {
+  /* margin-top: 20px;
+    margin-right: 20px; */
+  background: @bg;
+  /* background: red; */
+  padding: 8px;
+  min-width: 5px;
+  border: 0.5px solid @tertiary;
+}
+
+.notification:hover
+  .notification-default-action
+  .notification-content
+  .summary {
+  color: @tertiary;
+}
+
+.notification:hover .notification-default-action .notification-content .time {
+  color: @primary;
+}
+
+.notification-default-action:hover {
+  background: none;
+}
+
+.notification_row {
+  /* background: #ff0000; */
+  padding: 10px;
+}
+
+.notification_row:focus {
+  /* background: #ff0000; */
+  border: none;
+}
+
+.notification-background {
+  padding: 0 0 10px 0;
+  margin: 0;
+  spacing: 0;
+}
+
+.notification-content {
+  background: @none;
+}
+
+.summary {
+  color: @primary;
+}
+
+.time {
+  color: @primary;
+}
+
+.body {
+  color: @primary;
+  margin-top: 10px;
+}

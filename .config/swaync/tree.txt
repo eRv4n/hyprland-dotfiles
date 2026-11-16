@@ -1,0 +1,68 @@
+source claudeai
+
+1. Dua jendela utama
+.floating-notifications        → popup yang muncul sendiri di pojok layar
+└── .notification-row ...      (struktur notifikasi, lihat bagian 4)
+
+.control-center                → panel yang dibuka lewat keybind
+├── .widget-buttons-grid       (widget 1)
+├── .widget-mpris              (widget 2)
+├── .widget-volume             (widget 3)
+└── .control-center-list       (widget 4: "notifications")
+    └── .notification-group ...
+
+2. Widget 1: buttons-grid
+.widget-buttons-grid
+└── flowbox
+    └── flowboxchild
+        └── button                 (tiap tombol: WiFi, BT, DND, Lock, Trash, Wallpapers)
+            ├── :hover
+            └── :checked           (toggle yang sedang menyala)
+
+3. Widget 2 dan 3: mpris dan volume
+.widget-mpris
+└── .widget-mpris-player
+    ├── .widget-mpris-album-art    (cover, ukurannya dari image-size)
+    ├── .widget-mpris-title        (judul lagu)
+    ├── .widget-mpris-subtitle     (artis)
+    └── box > button               (⏮ ⏯ ⏭)
+
+.widget-volume
+├── label                          (ikon 󰕾)
+└── scale
+    └── trough
+        ├── highlight              (bagian terisi)
+        └── slider                 (bulatan penggeser)
+
+4. Widget 4: daftar notifikasi (termasuk grup)
+
+window (control_center_window)
+└── .control-center                 ← parent langsung
+    ├── .widget-buttons-grid        ← widget 1 (di atas list)
+    ├── .widget-mpris               ← widget 2
+    ├── .widget-volume              ← widget 3
+    └── scrolledwindow (pembungkus scroll)
+        └── .control-center-list    ← daftar notifikasi
+
+.control-center-list                          (wadah scroll)
+└── .notification-group                       (satu tumpukan per aplikasi)
+    ├── .notification-group-headers           (baris header)
+    │   ├── .notification-group-icon          (ikon gear)
+    │   ├── .notification-group-header        (teks "notify-send")
+    │   ├── .notification-group-collapse-button    (minimize)
+    │   └── .notification-group-close-all-button   (clear grup)
+    └── .notification-row                     (tiap notifikasi)
+        └── .notification-background
+            └── .notification                 (+ .critical / .normal / .low)
+                ├── .notification-default-action
+                │   └── .notification-content
+                │       ├── .image            (ikon aplikasi)
+                │       ├── .summary          (judul)
+                │       ├── .time             (waktu)
+                │       ├── .body             (isi teks)
+                │       ├── .body-image       (gambar di isi)
+                │       └── .inline-reply
+                │           ├── .inline-reply-entry
+                │           └── .inline-reply-button
+                ├── .notification-action > button   (tombol aksi)
+                └── .close-button                   (tombol X)
