@@ -1,0 +1,119 @@
+@import "colors.css";
+
+* {
+  font-family: "AdwaitaSans", "Jetbrains Mono Nerd";
+  border: none;
+}
+
+window#waybar {
+  background: transparent;
+  color: @tertiary;
+}
+
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#mpris,
+#custom-notification,
+#disk,
+#tray {
+  padding: 0 15px 0 15px;
+  background-color: @bg;
+  border-radius: 1rem;
+}
+
+tooltip {
+  background-color: @bg;
+}
+
+tooltip label {
+  color: @tertiary;
+}
+
+/* tooltip {
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  border-radius: 8px;
+  border: 1px. solid #cba6f7;
+} */
+
+/* tooltip label {
+  color: #cdd6f4;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 12px;
+} */
+
+#custom-launcher {
+  border-radius: 1rem;
+  padding: 0 15px 0 13px;
+  background-color: @tertiary;
+  color: @bg;
+  margin: 0 0 0 10px;
+}
+
+#clock {
+  color: @primary;
+  background: @bg;
+  padding: 0 20px;
+}
+
+#network {
+  color: @primary;
+}
+
+#custom-notification {
+  color: @tertiary;
+  /* background-color: @primary; */
+  /* background-color: mix(@primary, #000000, 0.2); */
+  background-color: @bg;
+}
+
+#battery {
+  background-color: @tertiary;
+  color: @bg;
+  margin: 0 10px 0 0;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @fg;
+  background-color: #19a252;
+}
+
+#workspaces {
+  background-color: @bg;
+  border-radius: 1rem;
+  font-size: 1px;
+  /* padding: 5px 4px; */
+}
+
+#workspaces button {
+  padding: 0;
+  /* margin: 0 4px; */
+  margin: 5px 3px;
+  border-radius: 0.8rem;
+  color: @tertiary;
+  font-size: 9px;
+  background: @surface_container;
+  min-height: 0;
+  min-width: 40px;
+  transition-property: color, background, min-width;
+  transition-duration: 0.3s;
+  box-shadow: none;
+}
+
+#workspaces button.active {
+  background-color: @tertiary;
+  min-width: 60px;
+  color: @bg;
+  transition-property: color, background, min-width;
+  transition-duration: 0.35s;
+}
+
+#workspaces button:nth-child(1) {
+  margin-left: 6px;
+}
+#workspaces button:last-child {
+  margin-right: 6px;
+}

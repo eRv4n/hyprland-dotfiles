@@ -1,0 +1,115 @@
+@import "colors.css";
+
+* {
+  font-family: "AdwaitaSans", "Jetbrains Mono Nerd";
+  border: none;
+}
+
+window#waybar {
+  background: transparent;
+  color: @primary;
+}
+
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#mpris,
+#custom-notification,
+#disk {
+  padding: 0 15px 0 15px;
+  background-color: @bg;
+}
+
+tooltip {
+  background-color: @bg;
+}
+
+tooltip label {
+  color: @tertiary;
+}
+
+/* tooltip {
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+  border-radius: 8px;
+  border: 1px. solid #cba6f7;
+} */
+
+/* tooltip label {
+  color: #cdd6f4;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 12px;
+} */
+
+#custom-launcher {
+  border-radius: 1rem 0 0 1rem;
+  padding: 0 15px 0 13px;
+  background-color: @bg;
+  color: @primary;
+  margin: 0;
+}
+
+#clock {
+  color: @primary;
+}
+
+#network {
+  color: @primary;
+}
+
+#custom-notification {
+  color: @primary;
+  /* background-color: @primary; */
+  /* background-color: mix(@primary, #000000, 0.2); */
+  background-color: @bg;
+}
+
+#battery {
+  background-color: @bg;
+  color: @primary;
+  margin: 0;
+  border-radius: 0 1rem 1rem 0;
+}
+
+#battery.charging,
+#battery.plugged {
+  color: @fg;
+  background-color: #19a252;
+}
+
+#workspaces {
+  background-color: @bg;
+  font-size: 1px;
+  /* padding: 5px 4px; */
+}
+
+#workspaces button {
+  padding: 0;
+  /* margin: 0 4px; */
+  margin: 5px 3px;
+  border-radius: 0.8rem;
+  color: @primary;
+  font-size: 9px;
+  background: @surface_container;
+  min-height: 0;
+  min-width: 40px;
+  transition-property: color, background, min-width;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+  box-shadow: none;
+}
+
+#workspaces button.active {
+  background-color: @primary;
+  color: @bg;
+  transition-property: color, background, min-width;
+  transition-timing-function: ease;
+}
+
+#workspaces button:nth-child(1) {
+  margin-left: 6px;
+}
+#workspaces button:last-child {
+  margin-right: 6px;
+}
