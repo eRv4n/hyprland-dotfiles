@@ -20,6 +20,4 @@ awww img "$wall" --transition-type grow --transition-pos center --transition-dur
 matugen image "$wall" -m dark -t scheme-tonal-spot --source-color-index 0
 
 setsid -f waybar
-# notify-send "󰸉   Wallpaper changed" "A fresh new look for your desktop."
-# notify-send -i "home/ervan/Downloads/color-palette.svg" "Theme Updated" "The new color palette has been applied."
 notify-send -i applications-graphics " Wallpaper Updated"
