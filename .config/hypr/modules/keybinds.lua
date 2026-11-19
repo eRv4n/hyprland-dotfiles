@@ -59,10 +59,10 @@ hl.bind(
 	hl.dsp.exec_cmd([[
 if pidof hypridle >/dev/null; then
     pkill hypridle
-    notify-send -t 2000 "Auto-lock" "Dimatikan"
+    notify-send -t 2000 "Auto-lock" "Dissable"
 else
     hypridle &
-    notify-send -t 2000 "Auto-lock" "Dinyalakan"
+    notify-send -t 2000 "Auto-lock" "Enabled"
 fi
 ]])
 )

@@ -1,0 +1,106 @@
+@import url("../waybar/colors.css");
+
+
+* {
+	background-image: none;
+	box-shadow: none;
+}
+
+window {
+	background-color: rgba(34, 32, 32, 0.18);
+}
+
+button {
+	text-decoration-color: #FFFFFF;
+    color: #FFFFFF;
+	background-color: rgba(9, 9, 9, 0.71);
+	/* background-color: #1E1E1E; */
+	border-style: solid;
+	border-width: 0px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+
+}
+
+button:focus, button:active, button:hover {
+	background-color:rgba(20, 19, 19, 0.39);
+	outline-style: none;
+	box-shadow: 0 0px 8px rgba(0, 0, 0, 0.17)
+}
+
+#lock {
+    background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+	border-radius: 10px 0 0 10px;
+    margin : 15px 0 15px 0;
+}
+
+#shutdown {
+    background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+	border-radius: 0px;
+    margin : 15px 0 15px 0;
+}
+
+#logout {
+    background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+	border-radius: 0px;
+    margin : 15px 0 15px 0;;
+}
+
+#reboot {
+	background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+	border-radius: 0px;
+	margin : 15px 0 15px 0;;
+}
+
+#hibernate {
+	background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+	/* border-radius: 0px; */
+	border-radius: 0px 10px 10px 0px;
+	margin : 15px 0 15px 0;;
+}
+
+#suspend {
+    background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+	border-radius: 0px 10px 10px 0px;
+    margin : 15px 0 15px 0;;
+}
+
+#lock:hover, #lock:active, #lock:focus {
+	border-radius: 10px;
+    margin : 0;
+	background-size: 30%;
+}
+
+#shutdown:hover, #shutdown:active, #shutdown:focus {
+	border-radius: 10px;
+    margin : 0px;
+	background-size: 30%;
+}
+
+#logout:hover, #logout:active, #logout:focus {
+	border-radius: 10px;
+    margin : 0px;
+	background-size: 30%;
+}
+
+#reboot:hover, #reboot:active, #reboot:focus {
+	border-radius: 10px;
+	margin : 0px;
+	background-size: 30%;
+}
+
+#hibernate:hover, #hibernate:active, #hibernate:focus {
+	border-radius: 10px;
+	margin : 0px;
+	background-size: 30%;
+}
+
+#suspend:hover, #suspend:active, #suspend:focus {
+	border-radius: 10px;
+    margin : 0px;
+	background-size: 30%;
+}
+
+
+
