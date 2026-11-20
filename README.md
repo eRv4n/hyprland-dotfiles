@@ -160,7 +160,7 @@ Credits and references for individual themes, scripts, and configurations will b
 Wallpapers used in this setup are sourced from external repositories. 
 Credits and links to the original sources are provided below.
 
-- [Repository Name](https://github.com/binnewbs/arch-hyprland/tree/main/wallpapers) — by [Author](https://github.com/binnewbs)
+- [Repository](https://github.com/binnewbs/arch-hyprland/tree/main/wallpapers) — by [@binnewbs](https://github.com/binnewbs)
 
 ---
 
