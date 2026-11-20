@@ -155,6 +155,13 @@ This configuration is inspired by various Linux desktop setups, community projec
 
 Credits and references for individual themes, scripts, and configurations will be listed here as appropriate.
 
+## Wallpapers
+
+Wallpapers used in this setup are sourced from external repositories. 
+Credits and links to the original sources are provided below.
+
+- [Repository Name](https://github.com/binnewbs/arch-hyprland/tree/main/wallpapers) — by [Author](https://github.com/binnewbs)
+
 ---
 
 ## License
